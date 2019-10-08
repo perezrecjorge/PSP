@@ -2,10 +2,16 @@ package UT2.Ejemplos;
 
 class Cuenta2 {
 	private int saldo ;
-	Cuenta2 (int s) { saldo = s; }
+	Cuenta2 (int s) {
+		saldo = s;
+	}
 	
-	int getSaldo() { return saldo; }
-	void restar(int cantidad) { saldo=saldo-cantidad; }
+	int getSaldo() {
+		return saldo;
+	}
+	void restar(int cantidad) {
+		saldo=saldo-cantidad;
+	}
 	
 	synchronized void RetirarDinero(int cant, String nom) {
 		if (getSaldo() >= cant) {
