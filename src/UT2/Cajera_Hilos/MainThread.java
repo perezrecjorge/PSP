@@ -1,9 +1,6 @@
 package UT2.Cajera_Hilos;
 
-/**
- *
- * @author Richard
- */
+
 public class MainThread {
 
 	public static void main(String[] args) {

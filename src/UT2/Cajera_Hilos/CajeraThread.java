@@ -1,9 +1,5 @@
 package UT2.Cajera_Hilos;
 
-/**
- *
- * @author Richard
- */
 public class CajeraThread extends Thread {
 
 	private String nombre;

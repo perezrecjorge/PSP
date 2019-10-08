@@ -1,9 +1,5 @@
 package UT2.Cajera_Hilos;
 
-/**
- *
- * @author Richard
- */
 public class Cajera {
 
 	private String nombre;

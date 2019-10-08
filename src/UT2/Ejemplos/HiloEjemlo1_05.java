@@ -1,4 +1,4 @@
-/* Extendiendo la clase Thread
+package UT2.Ejemplos;/* Extendiendo la clase Thread
  *
  * Ejemplo de uso de métodos de Thread
  */

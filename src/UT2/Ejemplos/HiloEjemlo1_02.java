@@ -1,4 +1,4 @@
-/* Extendiendo la clase Thread
+package UT2.Ejemplos;/* Extendiendo la clase Thread
  *
  * El hilo escribe 5 líneas
  *
