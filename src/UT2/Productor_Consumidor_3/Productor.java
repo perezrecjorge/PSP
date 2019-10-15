@@ -10,11 +10,11 @@ public class Productor extends Thread {
 
     public void run() {
         for (int i = 0; i < 5; i++) {
-            cola.put(i); //pone el n�mero
+            cola.put(i , n);
         
             try {
                 sleep(100);
-            } catch (InterruptedException e) { }			
+            } catch (InterruptedException e) { }
 			
         }
     }

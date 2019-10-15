@@ -11,8 +11,8 @@ public class Consumidor extends Thread {
     public void run() {
         int valor = 0;
         for (int i = 0; i < 5; i++) {
-            valor = cola.get(); //recoge el n�mero
-          
+            valor = cola.get(i, n); //recoge el n�mero
+
         }
     }
 }
