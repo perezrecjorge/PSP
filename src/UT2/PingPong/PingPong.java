@@ -28,19 +28,4 @@ public class PingPong extends Thread {
         }
     }
 
-/*
-    public void comanzarJuego() {
-        synchronized(PingPong.class) {
-            if (!mensaje.equals(turno)){
-                turno=mensaje;
-                try {
-                    System.out.println(mensaje);
-                    sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
- */
 }
