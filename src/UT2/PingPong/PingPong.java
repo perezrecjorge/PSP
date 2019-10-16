@@ -14,17 +14,16 @@ public class PingPong extends Thread {
         while(true) {
             comanzarJuego();
         }
-
     }
 
     public synchronized void comanzarJuego(){
         if (!mensaje.equals(turno)){
             try {
-                turno=mensaje;
                 Thread.currentThread().sleep(1000);
+                turno=mensaje;
                 System.out.println(mensaje);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+               e.printStackTrace();
             }
         }
     }
@@ -43,6 +42,5 @@ public class PingPong extends Thread {
             }
         }
     }
-
  */
 }
