@@ -31,7 +31,6 @@ public class Cola {
     	          wait();
     	    } catch (InterruptedException e) { }
     	  }
-    	  numero = valor;
     	  disponible = true;
     	  System.out.println(valor + "-> Productor " + numeroproductor + ": Se produce: " + numero);
     	  notifyAll();

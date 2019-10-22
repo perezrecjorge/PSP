@@ -2,12 +2,16 @@ package UT2.CuentaBancaria2;
 
 public class CuentaCB2 {
     int saldo, saldoMax;
+    int turno = 1;
+    boolean disponible = false;
+
 
     public CuentaCB2(int saldo, int saldoMax) {
         this.saldo = saldo;
         this.saldoMax = saldoMax;
-        System.out.println("SALDO INICIAL: " + saldo + " | SALDO MAXIMO: " + saldoMax);
+        System.out.println("SALDO INICIAL: " + saldo + " => SALDO MAXIMO: " + saldoMax);
     }
+
 
     public int getSaldo() {
         return saldo;
@@ -27,20 +31,37 @@ public class CuentaCB2 {
 
 
     public synchronized void ingreso(int cantidad, String nombre) {
+        while (!disponible) {
+            try {
+                wait();
+            } catch (InterruptedException e) { }
+        }
+
         if (this.saldo + cantidad > this.saldoMax)
             System.out.println("ERROR /!\\ NO PUEDE INGRESAR " + cantidad + " POR QUE EL SALDO MAXIMO ES " + this.saldo);
         else {
             this.saldo = this.saldo + cantidad;
-            System.out.println(nombre+" INGRESA " + cantidad + " | EL SALDO ACTUAL ES: " + this.saldo);
+            System.out.println(nombre+" INGRESA " + cantidad + " => EL SALDO ACTUAL ES: " + this.saldo);
         }
+        disponible = false;
+
+        notifyAll();
+
     }
 
     public synchronized void reintegro(int cantidad, String nombre) {
+        while (disponible){
+            try {
+                wait();
+            } catch (InterruptedException e) { }
+        }
+        disponible = true;
         if ((this.saldo - cantidad) < 0)
             System.out.println("ERROR /!\\ NO PUEDE SACAR " + cantidad + " POR QUE EL SALDO ACTUAL ES " + this.saldo);
         else {
             this.saldo = this.saldo - cantidad;
-            System.out.println(nombre+" RETIRA " + cantidad + " | EL SALDO ACTUAL ES: " + this.saldo);
+            System.out.println(nombre+" RETIRA " + cantidad + " => EL SALDO ACTUAL ES: " + this.saldo);
         }
+        notifyAll();
     }
 }
