@@ -1,0 +1,19 @@
+set classpath=;D:\CAPIT3\HILOS\HILO-BD-DB4O\db4o-8.0.224.15975-core-java5.jar;D:\CAPIT3\HILOS\HILO-BD-DB4O
+
+Clase InsertarDatos.java Crea la base de datos EMPLEDEP.YAP
+Hay que compilarla y ejecutarla antes.
+
+Compilar el resto:
+javac Empleados.java
+javac Departamentos.java
+javac Conexion.java
+javac AccesoDatos.java
+javac ClienteBD.java
+javac HiloServidor.java
+javac Servidor.java
+
+
+Linux:
+export CLASSPATH=$CLASSPATH:/home/usuario/lib/db4o-8.0.224.15975-core-java5.jar
+
+
