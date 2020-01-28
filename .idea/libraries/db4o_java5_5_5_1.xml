@@ -2,8 +2,12 @@
   <library name="db4o-java5-5.5.1">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/db4o-java5-5.5.1.jar!/" />
+      <root url="jar://D:/CURSO 19-20/REPOSITORIO/LIBRERIAS/commons-net-3.6.jar!/" />
+      <root url="jar://D:/CURSO 19-20/REPOSITORIO/LIBRERIAS/commons-net-examples-3.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://D:/CURSO 19-20/REPOSITORIO/LIBRERIAS/commons-net-3.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

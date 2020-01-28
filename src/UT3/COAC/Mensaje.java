@@ -7,7 +7,7 @@ public class Mensaje implements Serializable {
     String tipo;
     int clasificacion;
 
-    public Mensaje(String nombre, String tipo, int clasificacion){
+    public Mensaje(String nombre, String tipo, int clasificacion) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.clasificacion = clasificacion;
